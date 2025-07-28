@@ -1,0 +1,131 @@
+
+    /* === GENERAL STYLES === */
+	
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: azure;
+	  font-size: 1rem;
+	  
+    }
+
+    /* === CENTER EVERYTHING === */
+    .wrapper {
+      max-width: 450px;
+      margin: 0 auto;
+      background-color: azure;
+      min-height: 100vh;
+	  font-family: 'Bruno Ace SC', sans-serif;
+    }
+
+    /* === SUB-NAVIGATION BAR === */
+    .subnav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      background: azure;
+	  margin-right: 5px;
+    }
+
+    .subnav button {
+      flex: 1 0 25%; /* 4 buttons per row */
+      padding: 12px;
+      border: none;
+      background: #c71585;
+      color: #fbeeac;
+      font-size: 16px;
+      cursor: pointer;
+      border-bottom: 1px solid #444;
+	  border: 2px solid azure;
+	  border-radius: 0.7em;
+      text-align: center;
+	  font-family: 'Bruno Ace SC', sans-serif;
+	  font-size: 0.8em;
+    }
+
+    .subnav button.active {
+      background: #cce5f4;
+	  color: #1761bb;
+	  border: 3px solid tan;
+    }
+
+    /* On very small phones, only 2 buttons per row */
+    @media (max-width: 350px) {
+      .subnav button {
+        flex: 1 0 50%;
+      }
+    }
+	
+	h2#cipher-title {
+		font-family: 'Bruno ACE SC', sans-serif;
+		font-size: 0.9em;
+	}
+
+    /* === CALCULATOR CONTAINER === */
+    .container {
+      padding: 20px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+	  max-width: 347px;
+      padding: 12px;
+      margin-bottom: 15px;
+      font-size: 20px;
+	  display: block;
+    }
+
+    button.calculate {
+      width: 100%;
+      padding: 12px;
+      background: #2196F3;
+      color: white;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+	  font-family: 'Bruno Ace SC', sans-serif;
+    }
+
+    .result {
+      font-size: 20px;
+      margin: 10px 0;
+    }
+
+    .database-box {
+      background: white;
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      max-height: 150px;
+      overflow-y: auto;
+	  font-size: 18px;
+    }
+	
+	.pdf-link {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.pdf-link a {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #2196F3;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.pdf-link a:hover {
+  background: #1976D2;
+}
+
+footer {
+	position: relative;
+	bottom: 15%;
+	left: 1%;
+	text-align: center;
+	padding: 5px;
+	margin: 5px;
+}

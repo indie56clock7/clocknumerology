@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alphanumeric Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Bruno Ace SC" rel="stylesheet">
+  <script>
+        const currentYear = new Date().getFullYear();
+        document.addEventListener("DOMContentLoaded", function() {
+          document.getElementById("copyright-year").textContent = currentYear;
+        });
+    </script>  
+</head>
+<body>
+
+  <!-- === SUB-NAVIGATION === -->
+  <!-- === CENTERED WRAPPER === -->
+  <div class="wrapper">
+
+    <!-- === SUB-NAVIGATION === -->
+    <div class="subnav">
+      <!-- Copy/Paste buttons below to add more ciphers -->
+      <button class="nav-btn active" onclick="loadCipher('cipher1', this)">The "Clock Numerology" Cipher <br>(© 2010)</button>
+      <button class="nav-btn" onclick="loadCipher('cipher2', this)">2clock2 <br>(© 2023)</button>
+      <button class="nav-btn" onclick="loadCipher('cipher3', this)">25th-Hour <br>(© 2023)</button>
+      <button class="nav-btn" onclick="loadCipher('cipher4', this)">Fractured-Time <br>(© 2023)</button>
+      <button class="nav-btn" onclick="loadCipher('cipher5', this)">2FracTime2 <br>(© 2023)</button>
+      <button class="nav-btn" onclick="loadCipher('cipher6', this)">Tripartite-CN <br>(© 2024)</button>
+      <button class="nav-btn" onclick="loadCipher('cipher7', this)">Last-Hour <br>(© 2025)</button>
+    </div>
+
+    <!-- === CALCULATOR SECTION === -->
+    <div class="container" id="calculator-content">
+      <h2 id="cipher-title">The "Clock Numerology" Cipher</h2>
+      <input type="text" id="inputText" placeholder="Type a word...">
+      <button class="calculate" onclick="calculate()">Calculate</button>
+      <div class="result" id="resultDisplay"></div>
+	  <p style="font-size: 0.7em; text-align: center"><i>(All values are the same forwards &amp; backwards!)</i></p>
+
+      <h3>Database for value:</h3>
+      <div class="database-box" id="valueBox">
+        <!-- JavaScript will insert matching words here -->
+      </div>
+	<div class="pdf-link">
+		<a id="pdfLink" href="documents/clock-numerology-cipher-thesis.pdf" target="_blank">
+		📄 Thesis to this Cipher (PDF)
+		</a>
+	</div>
+    </div>
+  </div> <!-- End .wrapper -->
+  
+ <footer class="relative-footer">
+    <p class="center">&copy; 2010-<span id="copyright-year"></span><br><b>ClockNumerology™<br>Chris Landreth</b></p>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
